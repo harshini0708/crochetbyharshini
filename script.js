@@ -1,13 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let popup = document.createElement("div");
-    popup.classList.add("popup");
-    popup.innerHTML = `
-        <p>Welcome to my Crochet Showcase! 🧶💖</p>
-        <button onclick="this.parentElement.classList.remove('show')">Close</button>
-    `;
-    document.body.appendChild(popup);
-    
-    setTimeout(() => {
-        popup.classList.add("show");
-    }, 500);
+    alert("Welcome to my Crochet Showcase! 🧶💖");
 });
+
+function buyNow(productName) {
+    let message = encodeURIComponent(`Heyyy, I wanna order this: ${productName} 💖`);
+    window.location.href = `https://www.instagram.com/direct/t/crochetbyharshini?text=${message}`;
+}
