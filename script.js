@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             const url = this.getAttribute("data-url");
-            navigator.clipboard.writeText(url).then(() => {
-                alert("Instagram link copied! Open Instagram and paste it.");
+            const productName = this.parentElement.querySelector("h2").textContent;
+            const message = `Heyy, I wanna order this: ${productName}`;
+
+            navigator.clipboard.writeText(message).then(() => {
+                alert("Message copied! Open Instagram and paste it.");
             });
 
             window.open(url, "_blank");
