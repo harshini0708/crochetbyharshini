@@ -3,11 +3,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function buyNow(productName) {
-    let username = "crochetbyharshini"; // Your Instagram business page
-    let message = encodeURIComponent(`Heyyy, I wanna order this: ${productName} 💖`);
-    
-    // Open Instagram DM with pre-filled message
-    let instaLink = `https://www.instagram.com/direct/t/${username}/?text=${message}`;
-    
-    window.open(instaLink, "_blank");
+    let message = `Heyyy, I wanna order this: ${productName} 💖`;
+
+    // Copy message to clipboard
+    navigator.clipboard.writeText(message).then(() => {
+        alert("Message copied! Open Instagram and paste it in DMs 💌");
+        
+        // Open your Instagram page
+        window.open("https://www.instagram.com/crochetbyharshini/", "_blank");
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
 }
