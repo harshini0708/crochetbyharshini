@@ -1,47 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crochet by Harshini</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Harshini's Crochet Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Crochet by Harshini 🧶💖</h1>
+        <h1>Harshini's Crochet</h1>
+        <p>Handmade crochet art with love 💖</p>
     </header>
-    
-    <section class="products">
-        <div class="product">
-            <img src="crochet1.jpg" alt="Crochet Tote Bag">
-            <h2>Crochet Tote Bag</h2>
-            <p>Handmade with love! Perfect for daily use. 💕</p>
-            <button onclick="sendMessage('Crochet Tote Bag')">Buy Now</button>
-        </div>
 
-        <div class="product">
-            <img src="crochet2.jpg" alt="Crochet Headband">
-            <h2>Crochet Headband</h2>
-            <p>Super soft & stylish! ✨</p>
-            <button onclick="sendMessage('Crochet Headband')">Buy Now</button>
-        </div>
-
-        <div class="product">
-            <img src="crochet3.jpg" alt="Crochet Plushie">
-            <h2>Crochet Plushie</h2>
-            <p>The cutest handmade plushie ever! 🧸💖</p>
-            <button onclick="sendMessage('Crochet Plushie')">Buy Now</button>
-        </div>
+    <section class="gallery">
+        <div class="item"><img src="harshini6.jpg" alt="Crochet Item 1"></div>
+        <div class="item"><img src="harshini4.jpg" alt="Crochet Item 2"></div>
+        <div class="item"><img src="harshini3.jpg" alt="Crochet Item 3"></div>
     </section>
 
-    <script>
-        function sendMessage(productName) {
-            let message = `Heyyy, I wanna order this: ${productName} 💖`;
-            navigator.clipboard.writeText(message).then(() => {
-                alert("Message copied! Paste it in the DM on Instagram. 💌");
-                window.location.href = "https://www.instagram.com/direct/inbox/";
-            });
-        }
-    </script>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Harshini! I create handmade crochet items, including clothes, handbags, and keychains. Every piece is made with love and creativity. Follow my journey on Instagram!</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>📩 Email: <a href="mailto:crochetbyharshini@gmail.com">crochetbyharshinil@gmail.com</a></p>
+        <p>📸 Instagram: <a href="https://instagram.com/crochetbyharshini" target="_blank">@crochetbyharshini</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Harshini's Crochet | All rights reserved.</p>
+    </footer>
 </body>
 </html>
