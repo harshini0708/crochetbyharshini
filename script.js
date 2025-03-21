@@ -3,14 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttons.forEach(button => {
         button.addEventListener("click", function () {
-            const product = this.getAttribute("data-product");
-            const message = `Heyy, I wanna order this: ${product}! 🧶💖`;
+            const url = this.getAttribute("data-url");
+            const productName = this.getAttribute("data-product");
+            const message = `Heyy, I wanna order this: ${productName} 💖`;
+
+            // Copy message to clipboard
             navigator.clipboard.writeText(message).then(() => {
-                alert("Message copied! Open Instagram and paste it.");
+                alert("Message copied! Paste it in Instagram 💕");
             });
 
-            window.open("https://www.instagram.com/crochetbyharshini/", "_blank");
+            // Open Instagram page
+            window.open(url, "_blank");
         });
     });
 });
-
